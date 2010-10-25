@@ -1,0 +1,110 @@
+# Input file for Parallel solver
+# Total Number of blocks (Important number of processor should match this number)
+2
+# Time step dt
+4.0e-6
+# Total number of Iterations to run
+595890
+# Restart  [ 0 - YES  1 - NO ]
+0
+# Restart iteration
+2pt90ep00
+# Time Integration routine
+# 0 - RK2
+# 1 - RK4
+0
+# Solution Output Iteration
+5000
+# Solution Output Path
+./solOut/
+# Load Output Iteration
+100
+# Load Output Path
+./loadOut/
+# Input File Prefix
+.
+# -----------------------------------
+#          Rotor in Grid flag
+#           0 - YES  1 - NO
+#  For each block in the grid you must
+#  specify if there is a rotor present
+#  in the domain. In this case only
+#  Block 2 has a rotor.
+# -----------------------------------
+# Block 1
+1
+# Block 2
+0
+# -----------------------------------------
+# Rotor inputs for source term calcualtion
+# -----------------------------------------
+# nBlade
+2
+# omega
+52.721
+# psiZero
+0.0
+# rootCutOut (non-dimensional)
+0.169399
+# rotorRadius
+2.3241
+# Z - location
+8.0
+# FWHM_Y 
+2.0
+# FWHM_Z
+1.0
+# CollPitch (radians)
+# 11.2394 * M_PI / 180.0
+0.196164535948651
+# rootChord
+0.3556
+# CT required
+0.00703
+# Tip Correction Length
+0.8
+
+# --------------------------------------------------------------------------------
+# End of input
+# -------------------------------------------------------------------------------
+# Scratch
+# ---------------------------------------------------------------------------------
+# Solidity
+0.097
+# axis
+0.0
+0.0
+1.0
+# axisValue
+0.0
+# nLE
+10
+# nTE
+15
+# nSpan
+750
+# tipJetFlag
+false
+# tipLossFactorFlag
+true
+# bladeDefFlag
+true
+# taperRatio
+0.0 1.0
+1.0, 1.0
+# twist
+0.0 0.0
+1.0 0.0
+#sweep
+0.0 0.0
+1.0 0.0
+# flex
+0.0, 0.0
+1.0 0.0
+#offset
+0.0 0.0
+1.0 0.0
+#dx
+0.0 0.04
+1.0 0.04
+

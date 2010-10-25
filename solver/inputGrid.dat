@@ -1,0 +1,70 @@
+# This is an example input file to generate unstrucutred grid for a cylinder. 
+# To make things simple at the same time facilitate easy understading of inputs
+# by the user, shell script type comments can be used in the input files. The string
+# parser just ignores the comment lines and reads only the values. So make sure 
+# you follow the same order for the inputs shown here and do not skip any input 
+# parameters --- all inputs shown are mandatory ----
+# if the program is compiled with the -DTECPLOT_BINARY_OUTPUT the user will be given a
+# tecplot binary file for the grid otherwise only an ASCII file will be printed out which 
+# could be very large and combusome to read for large grid size -- use with caution
+
+# ---------------------------------------------------------------------------------
+# NOTE: I HAVE NO INPUT VALIDITY CHECKING BE VERY CAREFUL WHEN YOU DEFINE THE INPUTS
+# ----------------------------------------------------------------------------------
+# Input file starts here 
+# -----------------------
+# Program Path where the output files are required
+.
+# The total number of nodes along the theta direction
+120
+# The total number of nodes along the r direction
+5
+# The total number of nodes along the z ddirection
+10
+# The r direction point distribution
+0.0
+1.0 
+2.0
+3.0
+4.0 
+# The z direction distribution
+-1.0 
+0.0 
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0 
+# Transformation Information
+0.0 # X translation
+0.0 # Y translation
+0.0 # Z translation
+# Rotation 
+0.0 # X angle
+0.0 # Y angle
+0.0 # Z angle
+# Rotor position z index (based on the zdist you are giving as input start your counting from 1 to size(zdist)
+6
+# Rotor padding (units of zdist index) use this with caution as I dont have any check here to 
+# see if you are exceeding the total zdist index size.
+1
+# Root cut out distance fraction of blade radius 
+0.1
+# Blade Radius in meter
+2.1
+#  input >> _BEMT_Rotor_Blade.nBlade; Number of blades
+2
+#  input >> _BEMT_Rotor_Blade.psiZero; the psi zero in radians
+0.0
+#  input >> _BEMT_Rotor_Blade.omega; The angular velocity in radians per second
+11.0
+#  input >> _BEMT_Rotor_Blade.FWHM_Z; Spreading factor along Z fraction of blade chord
+1.0
+#  input >> _BEMT_Rotor_Blade.FWHM_Y; Spreding factor along Y fraction of blade chord
+1.0
+#  input >> _BEMT_Rotor_Blade.CollPitch; Collective pitch of the blade in radian
+0.5
+
